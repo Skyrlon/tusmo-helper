@@ -1,0 +1,26 @@
+input {
+  text-transform: uppercase;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#letters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.letter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.letter-container input {
+  width: 100%;
+}

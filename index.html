@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tusmo Helper</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <label for="word-length">Word length</label>
+    <input id="word-length" for="word-length" type="number" min="1" max="45" />
+    <button id="word-length-button">Submit</button>
+
+    <form>
+        <fieldset id="fieldset">
+            <legend>Word</legend>
+            <div id="letters"></div>
+            <button id="letters-submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <ul id="results"></ul>
+
+    <script src="main.js" async defer></script>
+</body>
+
+</html>

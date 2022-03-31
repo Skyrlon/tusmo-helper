@@ -24,3 +24,11 @@ fieldset {
 .letter-container input {
   width: 100%;
 }
+
+.letter-input.found {
+  background-color: red;
+}
+
+#letters .letter-container:nth-child(1) button {
+  display: none;
+}

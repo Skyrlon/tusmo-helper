@@ -10,6 +10,9 @@ lettersSubmitButton.addEventListener("click", handleLettersSubmit)
 let lettersFound = []
 
 function handleWordLengthSubmit() {
+  lettersFound = []
+  letters.innerHTML = ""
+  results.innerHTML = ""
   for (let i = 0; i < parseInt(wordLengthInput.value); i++) {
     const letterContainer = `<div class="letter-container">
 <input class="letter-input" type="text" maxlength="1" size="1" />

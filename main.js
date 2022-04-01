@@ -79,11 +79,22 @@ function getAllResults(e) {
 
   const wordsOnlyWithLettersFound = uniqueWordsArray.filter(onlyWordWithLettersFound)
 
-  for (let i = 0; i < parseInt(wordsOnlyWithLettersFound.length); i++) {
+  wordsOnlyWithLettersFound.forEach((word) => {
+    let lettersHtml = []
+    word.split("").forEach((letter, index) => {
+      if (letter === lettersFound[index]) {
+        lettersHtml.push(`<span class="found">${letter}</span>`)
+      } else {
+        lettersHtml.push(`<span>${letter}</span>`)
+      }
+    })
+
     const newItem = document.createElement("li")
-    newItem.textContent = wordsOnlyWithLettersFound[i].toUpperCase()
+    newItem.innerHTML = lettersHtml.join("")
     results.appendChild(newItem)
-  }
+  })
+
+
 }
 
 function onlyUnique(value, index, self) {

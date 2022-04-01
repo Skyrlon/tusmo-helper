@@ -25,10 +25,20 @@ fieldset {
   width: 100%;
 }
 
-.letter-input.found {
+.found {
   background-color: red;
 }
 
 #letters .letter-container:nth-child(1) button {
   display: none;
+}
+
+li {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+li span {
+  text-transform: uppercase;
+  padding: 0.5rem;
 }

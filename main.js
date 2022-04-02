@@ -65,13 +65,12 @@ function getAllResults(e) {
   const wordsArray = []
 
   for (let i = 1; i < lettersArray.length; i++) {
-    const lettersArrayClone = lettersArray.filter((x, index) => index !== i)
     const letterToMove = lettersArray[i]
 
-    for (let j = 0; j < lettersArrayClone.length; j++) {
-      let lettersArrayCloneClone = [...lettersArrayClone]
-      lettersArrayCloneClone.splice(j + 1, 0, letterToMove)
-      wordsArray.push(lettersArrayCloneClone.join(''))
+    for (let j = 0; j < lettersArray.length - 1; j++) {
+      const lettersWithoutLetterToMove = lettersArray.filter((x, index) => index !== i)
+      lettersWithoutLetterToMove.splice(j + 1, 0, letterToMove)
+      wordsArray.push(lettersWithoutLetterToMove.join(''))
     }
   }
 

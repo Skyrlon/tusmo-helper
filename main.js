@@ -45,6 +45,7 @@ function handleLettersSubmit(e) {
 }
 
 function handleLettersFound() {
+  lettersFound = []
   const letterInputs = document.getElementsByClassName("letter-input")
   for (let i = 0; i < letterInputs.length; i++) {
     if (/^[a-zA-Z]+$/.test(letterInputs[i].value) && letterInputs[i].classList.contains("found")) {
@@ -57,6 +58,7 @@ function handleLettersFound() {
 
 function getAllResults(e) {
   e.preventDefault()
+  results.innerHTML = ""
   const lettersArray = []
   for (let i = 0; i < parseInt(wordLengthInput.value); i++) {
     lettersArray.push(document.getElementsByClassName("letter-input")[i].value)

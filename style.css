@@ -8,6 +8,14 @@ fieldset {
   align-items: center;
 }
 
+.word-form {
+  display: none;
+}
+
+.word-form.show {
+  display: block;
+}
+
 #letters {
   display: flex;
   flex-direction: row;

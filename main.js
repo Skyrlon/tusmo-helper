@@ -3,6 +3,7 @@ const wordLengthButton = document.getElementById("word-length-button")
 const lettersSubmitButton = document.getElementById("letters-submit")
 const results = document.getElementById("results")
 const letters = document.getElementById("letters")
+const wordForm = document.querySelector(".word-form")
 
 wordLengthButton.addEventListener("click", handleWordLengthSubmit)
 lettersSubmitButton.addEventListener("click", handleLettersSubmit)
@@ -11,6 +12,12 @@ let lettersFound = []
 
 //Create inputs as much there are letters in the word 
 function handleWordLengthSubmit() {
+  if (!parseInt(wordLengthInput.value)) {
+    return
+  }
+  if (!wordForm.classList.contains("show")) {
+    wordForm.classList.add("show")
+  }
   //Reset all data
   lettersFound = []
   letters.innerHTML = ""

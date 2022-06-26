@@ -32,8 +32,6 @@ function handleWordLengthSubmit() {
   }
   const letterButtons = document.getElementsByClassName("letter-button")
   const letterInputs = document.getElementsByClassName("letter-input")
-  //First is always already found
-  letterInputs[0].classList.add("found")
   //Add click events for found toggle buttons
   addEventListeners(letterButtons, "click", handleLetterButtonClick)
 }

@@ -37,10 +37,6 @@ fieldset {
   background-color: red;
 }
 
-#letters .letter-container:nth-child(1) button {
-  display: none;
-}
-
 li {
   list-style: none;
   margin: 1rem 0;

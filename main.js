@@ -89,7 +89,7 @@ function getAllResults(e) {
 
     for (let j = 0; j < lettersArray.length - 1; j++) {
       const lettersWithoutLetterToMove = lettersArray.filter((x, index) => index !== i)
-      lettersWithoutLetterToMove.splice(j + 1, 0, letterToMove)
+      lettersWithoutLetterToMove.splice(j, 0, letterToMove)
       wordsArray.push(lettersWithoutLetterToMove.join(''))
     }
   }
